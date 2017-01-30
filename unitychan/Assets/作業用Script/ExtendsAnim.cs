@@ -75,29 +75,6 @@ public class ExtendsAnim : MonoBehaviour {
 			}
 		}
 	}
-
-	//こっちのwalkは徘徊途中でジャンプさせる｡引数にジャンプパワーを設定
-	protected IEnumerator Walk(sbyte JmpPower){
-		animator.SetFloat (hashSpeed, 1f);//パラメーターに数値をセット
-		bool Cindy_Walk = false;
-		for (int i = 0; i <= 100; i++) {
-			if (!Cindy_Walk) rig2d.velocity = Vector2.right;
-			else          rig2d.velocity = Vector2.left;
-			yield return null;
-			if (i == 100){
-				if (Cindy_Walk) {
-					rig2d.velocity = new Vector2(rig2d.velocity.x,JmpPower);
-					animator.SetFloat (hashFallSpeed, rig2d.velocity.y);
-					Cindy_Walk = false;
-					i = 0;
-					spriteRenderer.flipX = false;//反転
-				} else {
-					Cindy_Walk = true;
-					i = 0;
-					spriteRenderer.flipX = true;//反転
-				}
-			}
-		}
-	}
+		
 
 }

@@ -14,7 +14,7 @@ public class TokoAction : ExtendsAnim {
 		base.Start ();
 		box2d = GetComponent<BoxCollider2D> ();
 		//徘徊開始
-		StartCoroutine (Walk());
+		StartCoroutine ("Walk");
 	}
 
 	// Update is called once per frame

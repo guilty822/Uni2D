@@ -11,7 +11,7 @@ public class CindyAction : ExtendsAnim {
 		 * だから文字列指定しないで普通に関数を呼んで引数を渡すようにしてやる
 		 * StartCoroutine(コルーチン名(引数));
 		*/
-		StartCoroutine (Walk(5));
+		StartCoroutine ("Walk");
 	}
 	
 	// Update is called once per frame
